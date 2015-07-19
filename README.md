@@ -103,3 +103,33 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+testcode
+> mat <- matrix(c(1,0,5,2,1,6,3,4,0),nrow = 3,ncol = 3)
+> print(mat)
+[,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    0    1    4
+[3,]    5    6    0
+> matrixx <- makeCacheMatrix(mat)
+> matrixx$get()
+[,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    0    1    4
+[3,]    5    6    0
+> matrixx$getinverse()
+NULL
+> cacheSolve(matrixx)
+[,1] [,2] [,3]
+[1,]  -24   18    5
+[2,]   20  -15   -4
+[3,]   -5    4    1
+> matrixx$getinverse()
+[,1] [,2] [,3]
+[1,]  -24   18    5
+[2,]   20  -15   -4
+[3,]   -5    4    1
+> class(matrixx$get())
+[1] "matrix"
+> class(matrixx$getinverse())
+[1] "matrix"
